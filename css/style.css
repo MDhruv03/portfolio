@@ -18,12 +18,12 @@
 }
 
 .profile-pic {
-  width: 240px;
-  height: 240px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--border);
-  box-shadow: 0 10px 30px var(--shadow);
+  border: 5px solid var(--border);
+  box-shadow: 0 12px 35px var(--shadow);
 }
 
 .hero-text {
@@ -449,6 +449,10 @@ body {
     .skills {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+    .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 /* Animations */
