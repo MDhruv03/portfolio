@@ -4,6 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+.hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--border);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.hero-text {
+  flex: 2;
+}
+
 
 :root {
     --bg-primary: #ffffff;
@@ -72,7 +98,7 @@ body {
 
 .logo:hover {
     transform: scale(1.05);
-}
+} 
 
 .nav-links {
     display: flex;
