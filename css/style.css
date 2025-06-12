@@ -30,11 +30,21 @@
 .hero-text {
   flex: 2;
 }
-.home-lottie {
-  width: 60vw;           /* scales with screen width */
-  max-width: 480px;       /* cap at desktop size */
-  min-width: 140px;       /* avoid shrinking too small */
-  aspect-ratio: 1 / 1;    /* keeps it square */
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .hero-image {
+    max-width: 80vw; /* Takes more width on mobile */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    max-width: 90vw; /* Even more width on very small screens */
+  }
+  .home-lottie {
+    min-width: 120px; /* Smaller minimum size for tiny screens */
+  }
 }
 
 
@@ -464,13 +474,6 @@ body {
 @media (min-width: 1024px) {
   .hero-image {
     margin-top: -380px;
-  }
-}
-/* Optional: Add margin control for smaller screens */
-@media (max-width: 480px) {
-  .home-lottie {
-    margin-top: 0;
-    max-width: 320px;
   }
 }
 
