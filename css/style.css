@@ -15,7 +15,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-top: -340px;
+  margin-top: -60px;
 }
 
 .profile-pic {
@@ -453,6 +453,9 @@ body {
     .profile-pic {
     width: 180px;
     height: 180px;
+  }
+   .hero-image {
+    margin-top: -340px; /* only pull up image on desktop */
   }
 }
 
