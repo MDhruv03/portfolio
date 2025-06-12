@@ -460,6 +460,13 @@ body {
     margin-top: -380px;
   }
 }
+/* Optional: Add margin control for smaller screens */
+@media (max-width: 600px) {
+  .home-lottie {
+    margin-top: 0;
+    max-width: 320px;
+  }
+}
 
 /* Animations */
 @keyframes fadeInUp {
