@@ -144,3 +144,37 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-card, .project-card, .social-card').forEach(card => {
     observer.observe(card);
 });
+
+
+//StockTracker Lottie switch
+function updateStockAnimation(theme) {
+  const src = theme === 'dark'
+    ? 'assets/stock-tracker.json'
+    : 'assets/StockTracker White.json';
+
+  const stockLottie = document.getElementById('stockLottie');
+
+  // Create a new player element
+  const newPlayer = document.createElement('lottie-player');
+  newPlayer.setAttribute('src', src);
+  newPlayer.setAttribute('background', 'transparent');
+  newPlayer.setAttribute('speed', '1');
+  newPlayer.setAttribute('loop', '');
+  newPlayer.setAttribute('autoplay', '');
+  newPlayer.setAttribute('style', 'width: 100%; height: 100%;');
+  newPlayer.setAttribute('id', 'stockLottie');
+
+  // Replace the old player
+  stockLottie.parentNode.replaceChild(newPlayer, stockLottie);
+}
+
+
+// On load: set based on stored theme or default to dark
+const theme = localStorage.getItem('theme') || 'dark';
+updateStockAnimation(theme);
+
+// On theme toggle:
+document.querySelector('.theme-toggle').addEventListener('click', () => {
+  const newTheme = document.body.getAttribute('data-theme');
+  updateStockAnimation(newTheme);
+});
