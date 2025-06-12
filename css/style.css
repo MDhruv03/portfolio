@@ -31,10 +31,10 @@
   flex: 2;
 }
 .home-lottie {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  margin-top: -60px;
+  width: 60vw;           /* scales with screen width */
+  max-width: 480px;       /* cap at desktop size */
+  min-width: 240px;       /* avoid shrinking too small */
+  aspect-ratio: 1 / 1;    /* keeps it square */
 }
 
 
@@ -467,10 +467,10 @@ body {
   }
 }
 /* Optional: Add margin control for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .home-lottie {
     margin-top: 0;
-    max-width: 300px;
+    max-width: 320px;
   }
 }
 
