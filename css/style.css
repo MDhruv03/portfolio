@@ -30,6 +30,12 @@
 .hero-text {
   flex: 2;
 }
+.home-lottie {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin-top: -60px;
+}
 
 
 :root {
@@ -464,7 +470,7 @@ body {
 @media (max-width: 600px) {
   .home-lottie {
     margin-top: 0;
-    max-width: 320px;
+    max-width: 300px;
   }
 }
 
