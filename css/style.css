@@ -33,7 +33,7 @@
 .home-lottie {
   width: 60vw;           /* scales with screen width */
   max-width: 480px;       /* cap at desktop size */
-  min-width: 240px;       /* avoid shrinking too small */
+  min-width: 140px;       /* avoid shrinking too small */
   aspect-ratio: 1 / 1;    /* keeps it square */
 }
 
