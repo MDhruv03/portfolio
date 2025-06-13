@@ -1,3 +1,11 @@
+window.addEventListener('load', () => {
+  document.body.classList.remove('loading');
+  document.body.classList.add('loaded');
+  document.getElementById('preloader').style.display = 'none';
+});
+
+
+
 // Theme Toggle
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
@@ -133,17 +141,21 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-on-scroll');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.skill-card, .project-card, .social-card').forEach(card => {
-    observer.observe(card);
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-on-scroll');
+    } else {
+      entry.target.classList.remove('animate-on-scroll'); // allows re-trigger
+    }
+  });
+}, {
+  threshold: 0.1
 });
+
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
+
 
 
 //StockTracker Lottie switch
